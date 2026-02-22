@@ -9,6 +9,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Source files
 set(SOURCES
+    src/Token.cpp
     src/Lexer.cpp
     src/Parser.cpp
     src/IRGenerator.cpp
