@@ -172,7 +172,17 @@ Token Lexer::scanToken() {
             if (match('=')) {
                 return makeToken(TokenType::BANG_EQUAL);
             }
-            return errorToken("Unexpected '!' without '='");
+            return makeToken(TokenType::BANG);
+        case '&':
+            if (match('&')) {
+                return makeToken(TokenType::AND);
+            }
+            return errorToken("Unexpected '&' without '&'");
+        case '|':
+            if (match('|')) {
+                return makeToken(TokenType::OR);
+            }
+            return errorToken("Unexpected '|' without '|'");
         case '<':
             if (match('=')) {
                 return makeToken(TokenType::LESS_EQUAL);

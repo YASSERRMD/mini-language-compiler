@@ -33,6 +33,11 @@ enum class TokenType : uint8_t {
     SLASH,
     PERCENT,
 
+    // Logical
+    AND,
+    OR,
+    BANG,
+
     // Comparison
     EQUAL_EQUAL,
     BANG_EQUAL,
